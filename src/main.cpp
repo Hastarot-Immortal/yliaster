@@ -1,6 +1,6 @@
 #include <SFML/Graphics.hpp>
 #include "Player.hpp"
-#include "Factories/TextureFactory.hpp"
+#include "Factory/ResourceFactory.hpp"
 #include "UI.hpp"
 
 using KeyCode = sf::Keyboard::Scancode;
@@ -11,7 +11,7 @@ int main()
     sf::RenderWindow window(sf::VideoMode(windowSize), "Yliaster");
 
     TextureFactory textures("assets\\images");
-    sf::Font font("assets\\fonts\\simple-pixel.otf");
+    FontFactory fonts("assets\\fonts");
 
     Player player(textures.get("player"));
 
@@ -21,9 +21,9 @@ int main()
             {
                 return std::to_string(player.getHealth()) + "hp";
             },
-            font
+            fonts.get("simple-pixel")
         ),
-        std::make_shared<Label>(font, "Hello"),
+        std::make_shared<Label>(fonts.get("simple-pixel"), "Hello"),
     }, {std::nullopt, 40.f});
     status.setPosition({10.f, 10.f});
 
@@ -32,12 +32,12 @@ int main()
         { 
             player.setHealth(player.getHealth() - 5); 
         }, 
-        font, "Down HP"),
+        fonts.get("simple-pixel"), "Down HP"),
         std::make_shared<TextButton>([&player]()
         { 
             player.setHealth(player.getHealth() + 5); 
         }, 
-        font, "Up HP"),
+        fonts.get("simple-pixel"), "Up HP"),
         std::make_shared<ImageButton>([&window]()
         { 
             window.close(); 
