@@ -8,7 +8,7 @@ using KeyCode = sf::Keyboard::Scancode;
 int main()
 {
     sf::Vector2u windowSize = {1024, 768};
-    sf::RenderWindow window(sf::VideoMode(windowSize), "Down to Prima Materia");
+    sf::RenderWindow window(sf::VideoMode(windowSize), "Yliaster");
 
     TextureFactory textures("assets\\images");
     sf::Font font("assets\\fonts\\simple-pixel.otf");
