@@ -3,6 +3,8 @@
 #include <SFML/System/Vector2.hpp>
 #include <SFML/Graphics/Drawable.hpp>
 #include <SFML/Graphics/Transformable.hpp>
+#include <SFML/Graphics/Color.hpp>
+#include <SFML/Graphics/RenderTarget.hpp>
 
 inline constexpr sf::Color BACKGROUND_COLOR = sf::Color(46, 52, 64, 150);
 inline constexpr sf::Color HOVER_COLOR = sf::Color(81, 92, 115, 255);
