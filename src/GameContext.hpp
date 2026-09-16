@@ -29,5 +29,9 @@ public:
     void switchState(GameContext::State newState);
 private:
     GameState* currentState_;
+<<<<<<< HEAD
     std::vector<std::shared_ptr<GameState>> states_;
+=======
+    std::vector<std::shared_ptr<GameState>> states_;  
+>>>>>>> 07eb2d0ecde9d4899f0d4bd339f307a5a21bf89a
 };

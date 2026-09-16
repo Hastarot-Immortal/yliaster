@@ -1,10 +1,17 @@
 #include "GameContext.hpp"
 
 GameContext::GameContext(
+<<<<<<< HEAD
     sf::Vector2u windowSize,
     const fs::path& texturesPath,
     const fs::path& fontsPath,
     State initState
+=======
+        sf::Vector2u windowSize,
+        const fs::path& texturesPath,
+        const fs::path& fontsPath,
+        State initState
+>>>>>>> 07eb2d0ecde9d4899f0d4bd339f307a5a21bf89a
 )
     : window({sf::VideoMode(windowSize), "Yliaster"}),
     textures(texturesPath),
